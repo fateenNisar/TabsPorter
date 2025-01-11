@@ -15,7 +15,7 @@ TabsPorter is a Chrome extension designed to help you manage browser tabs effici
 
 ## Screenshots
 
-![TabsPorter UI](https://via.placeholder.com/600x400 "TabsPorter User Interface")
+![TabsPorter UI](https://i.ibb.co/ChjzprH/Screenshot-2025-01-12-at-1-16-47-AM.png "TabsPorter User Interface")
 
 ---
 
