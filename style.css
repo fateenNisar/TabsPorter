@@ -1,0 +1,223 @@
+:root {
+  --background: 0, 0%, 100%;
+  --foreground: 222, 84%, 4.9%;
+  --card: 0, 0%, 100%;
+  --card-foreground: 222, 84%, 4.9%;
+  --popover: 0, 0%, 100%;
+  --popover-foreground: 222, 84%, 4.9%;
+  --primary: 222, 47%, 11%;
+  --primary-foreground: 210, 40%, 98%;
+  --secondary: 210, 40%, 96.1%;
+  --secondary-foreground: 222, 47%, 11%;
+  --muted: 210, 40%, 96.1%;
+  --muted-foreground: 215, 16%, 47%;
+  --accent: 210, 40%, 96.1%;
+  --accent-foreground: 222, 47%, 11%;
+  --destructive: 0, 84%, 60%;
+  --destructive-foreground: 210, 40%, 98%;
+  --border: 214, 32%, 91%;
+  --input: 214, 32%, 91%;
+  --ring: 222, 84%, 4.9%;
+  --radius: 0.5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  width: 400px;
+  margin: 0;
+  /* padding: 20px; */
+}
+
+.card {
+  background-color: hsl(var(--card));
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px hsla(var(--foreground), 0.1);
+}
+
+.card-header {
+  padding: 1.5rem;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(var(--card-foreground));
+}
+
+.card-description {
+  /* margin-top: 0.5rem; */
+  color: hsl(var(--muted-foreground));
+}
+
+.card-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  cursor: pointer;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.tab.active {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-bottom: 2px solid hsl(var(--primary));
+}
+
+.tab-content {
+  display: none;
+  padding-top: 1rem;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.button-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.button-primary:hover {
+  background-color: hsl(var(--primary), 0.9);
+}
+
+.textarea,
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.linksBox {
+  margin: 10px 5px;
+  height: 200px;
+  resize: vertical;
+  overflow-y: scroll;
+  border: 1px solid hsl(var(--border));
+  border-radius:5px;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.link {
+  margin: 8px 0;
+  color: blue;
+  font-size: 12px;
+}
+.scroll-area {
+  height: 200px;
+  width: 100%;
+  overflow-y: auto;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.url-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.url-item:last-child {
+  border-bottom: none;
+}
+
+.url-item button {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid hsl(var(--border));
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  text-align: center;
+}
+
+.toast {
+background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            margin-bottom: 0.5rem;
+            box-shadow: 0 2px 10px hsla(var(--foreground), 0.1);
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: opacity 0.3s, transform 0.3s;
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin-inline:10px;
+
+}
+.toast-show {
+    
+            opacity: 1;
+            transform: translateY(0);
+            display: flex;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: hsl(var(--primary-foreground));
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+/* .pasteUrls {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+
+} */

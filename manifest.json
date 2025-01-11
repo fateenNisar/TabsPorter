@@ -1,0 +1,24 @@
+{
+  "name": "TabsPorter",
+  "description":"Manage your open tabs! Copy all open tabs to the clipboard, export them as a file, or import tabs from a file to reopen in Chrome. Simplify tab management with ease",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icons": {
+      "16": "16px.png",
+      "48": "48px.png",
+      "128": "128px.png"
+    }
+  },
+  "icons":{
+
+      "16": "16px.png",
+      "48": "48px.png",
+      "128": "128px.png"
+  },
+  "permissions": [
+    "tabs",
+    "downloads"
+  ]
+}

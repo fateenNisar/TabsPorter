@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabsPorter</title>
+    <link href="./style.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="toast"></div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">TabsPorter</h2>
+        <p class="card-description">Copy, Export, Import, and Open Tabs Efficiently</p>
+      </div>
+
+      <div class="card-content">
+        <!-- Tab navigation -->
+        <div class="tabs">
+          <button class="tab active" data-tab="copy">
+            <i class="fas fa-copy" style="margin-right: 8px;"></i> Copy Tabs
+          </button>
+          <button class="tab" data-tab="paste">
+            <i class="fas fa-paste" style="margin-right: 8px;"></i> Paste Tabs
+          </button>
+        </div>
+
+        <!-- Copy tabs content -->
+        <div id="copyTab" class="tab-content active">
+          <div id="copiedUrls" class="linksBox" placeholder="Copied URLs will appear here..."></div>
+          <button id="copyAll" class="button button-primary">
+            <i class="fas fa-copy" style="margin-right: 8px;"></i> Copy All
+          </button>
+          <button id="exportButton" class="button button-primary">
+            <i class="fas fa-file-export" style="margin-right: 8px;"></i> Export to File
+          </button>
+        </div>
+
+        <!-- Paste tabs content -->
+        <div id="pasteTab" class="tab-content">
+          <textarea
+            id="pastedUrls"
+            placeholder="Paste links here (line separated) or import from file"
+            class="scroll-area"
+          ></textarea>
+          <button id="openTabsButton" class="button button-primary">
+            <i class="fas fa-folder-plus" style="margin-right: 8px;"></i> Open Tabs
+          </button>
+          <div style="position: relative; overflow: hidden;">
+            <button id="importButton" class="button button-primary">
+              <i class="fas fa-file-import" style="margin-right: 8px;"></i> Import from File
+            </button>
+            <input
+              type="file"
+              id="fileInput"
+              accept=".txt"
+              style="position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        TabsPorter. Made with <i class="fas fa-heart" style="color: red; margin-right: 4px;"></i> by 
+        <a href="https://github.com/fateenNisar" target="_blank">fateen</a>
+      </div>
+    </div>
+
+    <script src="./popup.js" type="module"></script>
+  </body>
+</html>
