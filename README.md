@@ -19,6 +19,22 @@ TabsPorter is a Chrome extension designed to help you manage browser tabs effici
 
 ---
 
+
+## Installation
+
+1. **Download the extension** from releases. 
+   
+2. **Unzip** the downloaded file.
+
+3. **Install the extension**:
+   - Open Chrome and go to the [Extensions page](chrome://extensions/).
+   - Enable **Developer Mode** (toggle in the top right).
+   - Click **Load unpacked** and select the folder containing the unzipped extension files.
+   
+4. Once installed, you can start using the extension right away to manage your tabs.
+
+
+---
 ## How to Use
 
 1. **Copy Tabs**:
